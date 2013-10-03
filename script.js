@@ -16,11 +16,12 @@ function startTimer() {
 	// later I want to add some more automated stuff
 }
 
-var motdArray = new Array('It\'s a great day to sell cars!', "Welcome to Bodys Used Motors. The finest cars left!", "Today is \"SALE FEVER\" day!!!", 'A name you can surely trust!');
+var motdArray = new Array("It\'s a great day to sell cars!", "Welcome to Bodys Used Motors. The finest cars left!", "Today is \"SALE FEVER\" day!!!", "A name you can surely trust!");
 
 // The important message of the day (motd)
 function changeMotd(){
-	var randomMotd = motdArray[Math.floor(Math.random() * motdArray.length)];
+	var randomMotd = motdArray[Math.floor((Math.random() * motdArray.length))];
+	console.log(randomMotd);
 	document.getElementById('motd').innerHTML=randomMotd;
 }
 
@@ -102,7 +103,11 @@ function numberWithCommas(number) {
 // I don't want people being able to save pictures of our hot rod stock
 // If they want to see our cars they have to buy them first
 function disableRightClick() {
-	
+	$(document).ready(function() {
+	$("img").bind("contextmenu",function(){
+	   return false;
+	}); 
+    }); 
 }
 
 
