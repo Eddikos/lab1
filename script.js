@@ -2,7 +2,7 @@
 My big file of javascript
 */
 
-var carArray = new Array("car-blue.png","greencar.png","pink.png","carred.png", "yella-car.png");
+var carArray = new Array("car-blue.png","greencar.png","pink.png","car-red.png", "yellacar.png");
 
 function changeCar() {
 	var banger = carArray[Math.floor(Math.random() * carArray.length)];
@@ -21,7 +21,7 @@ var motdArray = new Array('It\'s a great day to sell cars!', "Welcome to Bodys U
 // The important message of the day (motd)
 function changeMotd(){
 	var randomMotd = motdArray[Math.floor(Math.random() * motdArray.length)];
-	document.getElementById("motd").innerHTML=randomMotd;
+	document.getElementById('motd').innerHTML=randomMotd;
 }
 
 function calculateCarValue(form) {
